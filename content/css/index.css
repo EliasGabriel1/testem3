@@ -1,0 +1,62 @@
+header nav.desk{
+    position: static;
+    width: 99vw;
+    background: #fff;
+    padding: 10px 0;
+}
+
+header nav.desk .nav ul{
+    gap: 50px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+}
+
+nav .nav ul li a{
+    color: var(--ton-black-2);
+    font-size: 18px;
+    line-height: 23px;
+}
+
+ul{
+    display: flex;
+    gap: 21px;
+}
+
+
+/* --------------------------------------------------- Classes para reutilizar -------------------------------------------------- */
+
+/* --------------------------------------------------- Footer -------------------------------------------------- */
+
+footer{
+    background: var(--background-footer);
+    color: var(--ton-white-1);
+}
+
+footer>p{
+    padding: 7px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------- Medias Query -------------------------------------------------- */
+
+@media only screen and (min-width: 900px){
+    body > header >nav.desk{
+        display: block;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width: 900px){
+}

@@ -1,0 +1,231 @@
+.faixa-about-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.title-catalog{
+    font-size: 32px;
+    line-height: 44px;
+    color: var(--ton-black-2);
+}
+
+.content-product-catalog{
+    margin-top: 65px;
+}
+
+/* --------------------------------------------------- Filtro -------------------------------------------------- */
+
+.filter.desk{
+    flex-direction: column;
+}
+
+.filters>.orderby.desk>select{
+    width: 142px;
+    height: 42px;
+    border: 1px solid var(--second-color);
+}
+
+.filters>.orderby.desk>select>option{
+    height: 10px;
+}
+
+.filter>div>h4{
+    text-transform:uppercase;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: var(--ton-black-2);
+    margin-bottom: 15px;
+}
+
+.todas-cores{
+    font-size: 12px;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: var(--third-color);
+}
+
+.colors>ul>li>a{
+    display: flex;
+    align-items: center;
+}
+
+.colors>ul,.faixas>ul{
+    display: block;
+    gap: 11px;
+}
+
+.colors>ul>li,.faixas>ul>li{
+    margin-bottom: 11px;
+}
+
+.colors>ul>li>a>label,.faixas>ul>li>a>label{
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.tamanhos{
+    margin: 23px 0;
+}
+
+.tamanhos>ul{
+    max-width: 115px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+.tamanhos>ul>li{
+    border: 1px solid var(--second-color);
+}
+
+.tamanhos>ul>li:hover{
+    border: 1px solid var(--fourth-color);
+}
+
+.tamanhos>ul>li:hover>a{
+    color: var(--main-color);
+}
+
+.tamanhos>ul>li>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--second-color);
+}
+
+
+/* --------------------------------------------------- Produtos Catalógo -------------------------------------------------- */
+
+.grid-catalog-blouses{
+    display: grid;
+    gap: 43px 0;
+}
+
+.item-catalog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-catalog>.title{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.item-catalog>.price{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 14px;
+}
+
+.item-catalog>.price{
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--third-color);
+}
+
+.button-topay{
+    background-color: var(--main-color);
+    color: var(--ton-white-1);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.loading-more{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 35px;
+    cursor:pointer;
+    background-color: var(--fourth-color);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: var(--ton-white-1);
+    margin: 0 auto;
+    margin-bottom: 43px;
+}
+
+/* --------------------------------------------------- Button filter Catalógo-------------------------------------------------- */
+
+.group-filter.mobile{
+    border: 1px solid black;
+    margin-top: 13px;
+}
+
+.group-filter.mobile > button{
+    font-size: 24px;
+    height: 48px;
+    width: 172px;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+.filter input{
+    all: unset;
+    border: 1px solid black;
+    width: 16px;
+    height: 16px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.filter input:checked{
+  background-color: var(--fourth-color);
+  width: 16px;
+  height: 16px;
+}
+
+/* --------------------------------------------------- Medias Query Catalógo-------------------------------------------------- */
+
+@media only screen and (min-width: 900px){
+    .content-product-catalog{
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    .item-catalog >figure>img{
+        max-width: 195px;
+        max-height: 293px;
+    }
+    .grid-catalog-blouses{
+        grid-template-columns: repeat(auto-fit, minmax(293px, 1fr));
+    }
+    .button-topay{
+        width: 195px;
+        height: 33.55px;
+    }
+    .grid-catalog-blouses{
+        margin-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .item-catalog >figure>img{
+        max-width: 161.79px;
+        max-height: 242.55px;
+    }    
+    .grid-catalog-blouses{
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+    .button-topay{
+        width: 162px;
+        height: 33px;
+    }
+    .grid-catalog-blouses{
+        margin-bottom: 38.65px;
+    }
+
+    .faixa-about-product{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,117 @@
+.banner-main{
+    background-image: url("../img/banners/banner.png");
+    width: 100%;
+    min-height:411px ;
+    width: 100%;
+    background-size: cover;
+    min-height: 411px;
+}
+
+.faixa{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+}
+
+.item-faixa{
+    display: flex;
+    align-items: center;
+    max-width: min-content;
+}
+
+.group-text-faixa{
+    margin-left: 10px;
+}
+
+.group-text-faixa>h4{
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #00C0EE;
+    width: max-content;
+}
+
+.group-text-faixa>p{
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    width: max-content;
+}
+
+.mini-banners{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.grid-mini-banners{
+    display: grid;
+    grid-gap: 35px;
+    margin-bottom: 140px;
+}
+
+.grid-mini-banners>.item-mini-banner:nth-child(1){
+    grid-area:a;
+}
+
+.grid-mini-banners>.item-mini-banner:nth-child(2){
+    grid-area:b;
+}
+
+.grid-mini-banners>.item-mini-banner:nth-child(3){
+    grid-area:c;
+}
+
+.grid-mini-banners>.item-mini-banner:nth-child(4){
+    grid-area:d;
+}
+
+
+
+
+/* --------------------------------------------------- Medias Query -------------------------------------------------- */
+
+
+@media only screen and (min-width: 900px){
+    
+.grid-mini-banners{
+    grid-template-areas: 
+    "a b d "
+    "a c d";
+}
+.grid-mini-banners{
+    margin-top: 50px;
+}
+}
+
+@media only screen and (max-width: 900px){
+    .grid-mini-banners{
+        grid-template-areas: 
+        "a a"
+        "b c"
+        "d d";
+    }
+    .mini-banners{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .mini-banners figure{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .faixa{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }    
+
+    .grid-mini-banners{
+        margin-top: 25px;
+    }
+    .banner-main{
+        background-position: center;
+    }
+}
