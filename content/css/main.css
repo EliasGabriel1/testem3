@@ -14,9 +14,18 @@
     --ton-black-1:#000000;
     --ton-black-2:#333333;
     --background-footer: #000000;
+    --ton-shadowcart:#DDDDDD;
+    --ton-buttoncheckout:#048604;
+    --ton-scroll-1:#f1f1f1;
+    --ton-scroll-2:rgba(136, 136, 136, 0.652);
+    --ton-scroll-3:rgb(124, 124, 124);
     --transform-temp1: -45deg;
     --transform-temp2: 45deg;
 }
+
+.models {
+    display: none;
+  }
 
 a{
     text-decoration: none;
@@ -32,6 +41,45 @@ button{
     max-width: 1176px;
     margin:0 auto;
 }
+
+.overflow-hidden{
+    overflow: hidden;
+}
+  
+.invisible {
+    display: none !important;
+  }
+
+.checkbox {
+    display: inline-flex;
+    position: relative;
+   }
+   
+   input[type="checkbox"] {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     -o-appearance: none;
+     appearance: none;
+   }
+
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--ton-scroll-1);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--ton-scroll-2);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--ton-scroll-3);
+  }
 
 @media only screen and (max-width: 900px){
     .desk{

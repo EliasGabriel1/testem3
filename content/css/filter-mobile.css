@@ -1,0 +1,238 @@
+@media screen and (min-width: 900px) {
+    header.header-mobile {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    header.header-desk {
+      display: none;
+    }
+    header.header-mobile {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content: space-between;
+    }
+  }
+
+.ordenar-main{
+  padding-top: 10px;
+}
+
+.filters{
+    margin-bottom: 20px;
+  }
+.filter-padding{
+  padding: 5px 60px;
+}
+
+.filter-padding:nth-child(1){
+  border-right: 1px solid var(--ton-black-1)
+}
+
+  .ordenar-main{
+      overflow: auto;
+      height: 100%;
+  }
+
+.side-filtrar-wrapper .button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 22px;
+    border-bottom: 1px solid var(--ton-black-1);
+}
+
+.side-filtrar-wrapper .button h2{
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: var(--third-color);
+}
+
+.side-ordenar-wrapper .button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 22px;
+    border-bottom: 1px solid var(--ton-black-1);
+}
+
+.side-ordenar-wrapper .button h2{
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: var(--third-color);
+}
+
+
+  .side-ordenar-wrapper {
+      width: 100vw;
+  }
+  .side-filtrar-wrapper{
+    width: 100vw;
+  }
+  .side-filtrar-wrapper,
+  .side-ordenar-wrapper  {
+    background: var(--ton-white-1);
+    padding: 0 15px 0 0;
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s;
+    /* CSS transition speed */
+    box-sizing: border-box;
+  }
+  
+  .side-filtrar-wrapper > ul{
+    /* css ul list style */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    height: 95%;
+  }
+  
+  .side-filtrar-wrapper > ul > li > a,
+  .side-ordenar-wrapper > ul > li > a {
+    /* links */
+    display: block;
+    border-bottom: 1px solid var(--second-color);
+    padding: 6px 4px 6px 4px;
+    color: var(--third-color);
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  
+  .side-filtrar-wrapper > a.filtrar-close,
+  .side-ordenar-wrapper > a.ordenar-close  {
+    /* close button */
+    padding: 8px 0 4px 23px;
+    color: var(--second-color);
+    display: block;
+    font-size: 35px;
+    text-decoration: none;
+  }
+  
+  .filtrar-overlay,
+  .ordenar-overlay {
+    /* overlay */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--second-color);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .filter-mobile{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #checkbox-filtrar,
+  #checkbox-ordenar  {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .group-filter .side-ordenar-wrapper label,
+  .group-filter .side-filtrar-wrapper label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+  }
+  
+  .ordenar-main .filter-box label span{
+    position: unset;
+    display: block;
+    height: unset;
+    width: unset;
+    border: none;
+    background-color: unset;
+  }
+
+   .ordenar-main .filter-box.sizes\/ label span{
+    position: absolute;
+    top: 21px;
+    left: 10px;
+   }
+
+  .group-filter .side-ordenar-wrapper label.checkbox{
+    cursor: pointer;
+    display: flex;
+    height: unset;
+    width: unset;
+}
+  .side-ordenar-wrapper.active .group-filter .side-ordenar-wrapper label{
+    cursor: pointer;
+    position: unset;
+    display: flex;
+    height: unset;
+    width: unset;
+  }
+
+  
+  .group-filter  label span,
+  .group-filter  label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: var(--ton-black-1);
+    transition: 0.25s ease-in-out;
+  }
+  
+  .group-filter  label span:nth-child(1) {
+    top: 0;
+  }
+  
+  .group-filter  label span:nth-child(2) {
+    top: 8px;
+  }
+  
+  .group-filter  label span:nth-child(3) {
+    top: 16px;
+  }
+  
+  .group-filter label.checkbox-ordenar span:nth-child(1), 
+  .group-filter label.checkbox-filtrar span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  
+  .group-filter label.checkbox-ordenar span:nth-child(2), 
+  .group-filter label.checkbox-filtrar span:nth-child(2)  {
+    opacity: 0;
+  }
+  
+  .group-filter label.checkbox-ordenar span:nth-child(3),
+  .group-filter label.checkbox-filtrar span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+  
+.group-filter  .button {
+    width: 100%;
+  }
+  
+  .side-filtrar-wrapper.active .order{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 7px 20px;
+  }

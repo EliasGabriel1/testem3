@@ -1,30 +1,91 @@
 header nav.desk{
-    position: static;
-    width: 99vw;
-    background: #fff;
-    padding: 10px 0;
+  position: static;
+  background: #fff;
+  padding: 10px 0;
 }
 
 header nav.desk .nav ul{
-    gap: 50px;
+  gap: 50px;
 }
 
 .nav{
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: center;
 }
 
 nav .nav ul li a{
-    color: var(--ton-black-2);
-    font-size: 18px;
-    line-height: 23px;
+  color: var(--ton-black-2);
+  font-size: 18px;
+  line-height: 23px;
 }
 
 ul{
-    display: flex;
-    gap: 21px;
+  display: flex;
+  gap: 21px;
+}
+
+nav.blusa {
+  display: flex;  
+  justify-content: space-between;
+  padding: 15px 10px 10px;
+}
+
+
+
+/* --------------------------------------------------- mini cart -------------------------------------------------- */
+.dropdown-cart{
+  position: relative;
+}
+
+.dropdown-cart .produtos-minicart{
+  display: none;
+}
+
+.dropdown-cart:hover .produtos-minicart{
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  min-height: 100px;
+  top: 22px;
+  width: 250px;
+  background: var(--ton-white-1);
+  position: absolute;
+  box-shadow: -12px 15px 27px var(--ton-shadowcart);
+  border-radius: 7px;
+  max-height: 300px;
+  overflow-x: auto;
+}
+
+.produtos__minicart{
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkout{
+  justify-self: end;
+  background: var(--ton-buttoncheckout);
+  color: var(--ton-white-1);
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.item-minicart figure img{
+  width: 20px;
+  float: left;
+  padding: 10px;
+}
+
+.descricao-item-minicart p{
+  font-weight: 600;
+}
+
+.descricao-item-minicart span{
+  font-size: 14px;
 }
 
 
@@ -33,29 +94,25 @@ ul{
 /* --------------------------------------------------- Footer -------------------------------------------------- */
 
 footer{
-    background: var(--background-footer);
-    color: var(--ton-white-1);
+  background: var(--background-footer);
+  color: var(--ton-white-1);
 }
 
 footer>p{
-    padding: 7px 0;
-    text-align: center;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  padding: 7px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* --------------------------------------------------- Medias Query -------------------------------------------------- */
 
 @media only screen and (min-width: 900px){
-    body > header >nav.desk{
-        display: block;
-    }
-    footer{
-        display: flex;
-        flex-direction: row-reverse;
-    }
+  body > header >nav.desk{
+      display: block;
+  }
 }
 
 @media only screen and (max-width: 900px){

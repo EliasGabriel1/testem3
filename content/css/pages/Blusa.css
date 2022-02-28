@@ -1,3 +1,49 @@
+header{
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: var(--ton-white-1);
+  z-index: 1;
+}
+
+.button-reset.reset{
+  border: 1px solid #000;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.button-aplicar.aplicar{
+  padding: 15px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fourth-color);
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--ton-white-1);
+  border:none;
+}
+
+.filter-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+a.more-colors{
+  font-size: 12px;
+  line-height: 100%;
+  text-decoration: underline;
+}
+
 .faixa-about-product{
     display: flex;
     justify-content: space-between;
@@ -100,6 +146,10 @@
 
 /* --------------------------------------------------- Produtos Catalógo -------------------------------------------------- */
 
+.products-container{
+    min-height: 950px;
+}
+
 .grid-catalog-blouses{
     display: grid;
     gap: 43px 0;
@@ -136,9 +186,11 @@
     color: var(--ton-white-1);
     cursor: pointer;
     margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.loading-more{
+.load-more{
     align-self: center;
     display: flex;
     align-items: center;
@@ -180,25 +232,164 @@
   margin-right: 10px;
 }
 
-.filter input:checked{
-  background-color: var(--fourth-color);
-  width: 16px;
-  height: 16px;
+/* --------------------------------------------------- Medias Query Catalógo-------------------------------------------------- */
+
+
+header .bag {
+  margin-right: 25px;
 }
 
-/* --------------------------------------------------- Medias Query Catalógo-------------------------------------------------- */
+header .cart .bagNumberArea {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 14px;
+  top: 7px;
+  
+}  
+
+.bagNumber {  
+  position: absolute;
+  color: var(--ton-white-1);
+  font-weight: 700;
+  font-size: 12px;
+  right: 20px;
+  top: 8px;
+}
+
+.order-by span {
+  border: 1px solid var(--main-color); 
+  padding: 10px;
+  font-size: 15px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.order-content {
+  top: 130px;
+  width: 141px;
+  display: none;
+  position: absolute;
+  border: 1px solid var(--second-color);
+  border-top: 0;
+  margin-top: 3px;
+  background-color: var(--ton-white-1);
+}
+
+
+.order-content p {
+  padding: 14px;
+  font-size: 15px;
+  padding-right: 39px;
+  cursor: pointer;
+}
+
+.order-by:hover .order-content  {
+  display: block;
+}
+
+.order-content p:hover {
+ background-color: var(--fourth-color); 
+ color: var(--ton-white-1)
+}
+
+.filter-box.sizes\/{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 157px;
+}
+
+.filter-container h2 {
+ margin-bottom: 30px; 
+}
+
+.filter-container, .filter-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-box {
+ margin-bottom: 25px; 
+}
+
+.filter-box > * {
+  padding: 3px;
+}
+
+.filter-box h4 {
+  margin-bottom: 15px;
+}
+
+.filter-box label {
+ cursor: pointer; 
+}
+
+
+.checkbox > span {
+ padding-left: 8px;
+}
+
+.checkbox > input {
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+
+.checkbox > input:checked + span::before {
+  content: '';
+  width: 13px;
+  height: 13px;
+  display: block;
+  position: absolute;
+  background-color: var(--fourth-color);
+  left: 6px;
+  top: 4px;
+}  
+
+.checkbox-size {
+  width: 30px;
+  height: 30px;
+  padding: 8px 10px 8px 0;
+}
+
+.checkbox-size > input {
+  height: 32px;
+  width: 32px;
+  border: 1px solid var(--ton-black-2);
+  outline: none;
+}
+
+.checkbox-size span {
+ color: var(--second-color); 
+ text-align: center;
+ font-size: 14px;
+ position: relative;
+ bottom: 28px;
+ left: 6px;
+}
+
+.checkbox-size  > input:checked {
+  border: 1px solid var(--fourth-color);  
+}
+
+.checkbox-size  > input:checked  + span {
+  color: var(--main-color); 
+}
 
 @media only screen and (min-width: 900px){
     .content-product-catalog{
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 25% 75%;
     }
     .item-catalog >figure>img{
         max-width: 195px;
         max-height: 293px;
     }
     .grid-catalog-blouses{
-        grid-template-columns: repeat(auto-fit, minmax(293px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      gap: 65px;    
     }
     .button-topay{
         width: 195px;
@@ -229,3 +420,4 @@
         flex-direction: column;
     }
 }
+

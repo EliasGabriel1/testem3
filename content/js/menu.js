@@ -29,3 +29,8 @@ $(document).on('click', function (e) {
         $(overlay).css({ "opacity": "0", "width": "0" });
     }
 });
+
+
+function topay(e){
+    console.log("foi");
+}
