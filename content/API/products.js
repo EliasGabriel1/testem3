@@ -77,17 +77,21 @@ let products = [
 export default products
 
 
-
-// const URL_TO_FETCH = 'https://braziljs.org/api/list/events';
+// const URL_TO_FETCH = 'http://localhost:5000/products';
 // fetch(URL_TO_FETCH, {
-//   method: 'get' // opcional
+//   method: 'get' 
 // })
 // .then(function(response) {
 //   response.text()
 //   .then(function(result) {
-//     console.log(result);
+//      products = result;
 //   })
 // })
 // .catch(function(err) { 
 //   console.error(err);
 // });
+
+// console.log(products)
+
+
+// export default products;
